@@ -1,0 +1,108 @@
+@font-face {
+   font-family: "Urban";
+   src: url('../fonts/Urban_Blocker_Solid.ttf');
+}
+
+body {
+   text-align: center;
+   background-color: #202324;
+   width: auto;
+   height: auto;
+   margin: auto;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+   margin: 0;
+}
+
+header {
+   margin: 5px 0 5px;
+   font-family: 'Urban';
+   font-size: 99px;
+   color: yellow;
+}
+
+footer {
+   margin: 20px 0 20px;
+   color: yellow;
+   font-size: 10px;
+}
+
+#container {
+   display: inline-block;
+   width: auto;
+   margin: 0 auto;
+   border: 3px double white;
+   border-radius: 5px;
+   padding: 10px;
+}
+
+#grid {
+   padding: 0px;
+   line-height: 0px;
+   font-size: 0px;
+   background: dimgrey;
+   border-radius: 4px;
+}
+
+#info {
+   padding: 10px 0 20px;
+   color: white;
+   text-align: left;
+}
+
+#score::before {
+   content:'SCORE: ';
+}
+
+#player {
+   padding: 20px;
+   color: white;
+}
+
+#goobi {
+   position: relative;
+   top:0;
+   left:0;
+   z-index: 2;
+}
+
+.ghost {
+   position: absolute;
+   top:0;
+   left:0;
+   z-index: 3;
+}
+
+.weakGhost {
+   position: absolute;
+   top:0;
+   left:0;
+   z-index: 2;
+}
+
+.cell {
+   display: inline-block;
+   position: relative;
+   width: 22px;
+   height: 22px;
+}
+
+.dot {
+   position: absolute;
+   top:0;
+   left:0;
+   z-index: 1;
+}
+
+.pellet {
+   position: absolute;
+   top:3px;
+   left:4px;
+}
+
+.wall {
+   border-radius: 4px;
+   background: navy;
+}

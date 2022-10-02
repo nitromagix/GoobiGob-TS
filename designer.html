@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./assets/css/style.css">
+   </link>
+
+   <title>GoobiGob Board Creator</title>
+</head>
+
+      <style>
+         .animated {
+            background-image: url(/css/images/logo.png);
+            background-repeat: no-repeat;
+            background-position: left top;
+            padding-top:95px;
+            margin-bottom:60px;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+         }
+         
+         @keyframes flash {
+            0%, 50%, 100% {
+               opacity: 1;
+            }
+            25%, 75% {
+               opacity: 0;
+            }
+         }
+         
+         .flash {
+            animation-name: flash;
+         }
+      </style>
+
+
+<body>
+   <div id = "animated-example" class = "animated flash"></div>
+   <button onclick = "myFunction()">Reload page</button>
+   
+   <script>
+      function myFunction() {
+         location.reload();
+      }
+   </script>
+   <div id="container">
+      <header>
+         header
+      </header>
+      <div id="grid"></div>
+      <footer>
+         footer
+      </footer>
+   </div>
+   <script src="./assets/js/maze.js"></script>
+   <script src="./assets/js/grid.js"></script>
+   <script>
+      'use strict';
+      const MAZE_DATA_URL = './assets/mazes/20x20_maze.json';
+      const GRID_WIDTH = 20;
+      const GRID_HEIGHT = 20;
+      const CELL_WIDTH_HEIGHT = 20;
+
+      window.onload = async (e) => {
+         await main();
+
+      };
+
+      const main = async () => {
+         const mze = await maze.getData(MAZE_DATA_URL);
+         const grd = grid.buildGrid(mze);
+      }
+   </script>
+</body>
+
+</html>
